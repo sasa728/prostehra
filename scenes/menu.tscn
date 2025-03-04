@@ -1,0 +1,127 @@
+[gd_scene load_steps=13 format=3 uid="uid://dllgeihgc1dwc"]
+
+[ext_resource type="Texture2D" uid="uid://bwasismjeadss" path="res://assets/textures/Other/MainMenu.png" id="1_ommmr"]
+[ext_resource type="FontFile" uid="uid://e04wrxvglelf" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_vs8fc"]
+[ext_resource type="Script" path="res://scripts/ExitButton.cs" id="2_l8qkw"]
+[ext_resource type="Script" path="res://scripts/StartButton.cs" id="3_cptal"]
+[ext_resource type="Script" path="res://scripts/CreditsButton.cs" id="5_y3c0h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ryet1"]
+bg_color = Color(0.151717, 0.157506, 0.286343, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_re5rp"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jl2k5"]
+bg_color = Color(1, 0.92549, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vfj3a"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lgqw0"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bcpav"]
+bg_color = Color(1, 0.92549, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wneb5"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -606.0
+offset_top = -699.0
+offset_right = 599.0
+offset_bottom = 63.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ryet1")
+
+[node name="TextureRect" type="TextureRect" parent="MenuPanel"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 11.0
+offset_right = 1165.0
+offset_bottom = 701.0
+texture = ExtResource("1_ommmr")
+expand_mode = 1
+
+[node name="ExitButton" type="Button" parent="."]
+offset_left = 19.0
+offset_top = 12.0
+offset_right = 153.0
+offset_bottom = 38.0
+size_flags_horizontal = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_vs8fc")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover = SubResource("StyleBoxFlat_re5rp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jl2k5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_vfj3a")
+text = "Exit"
+script = ExtResource("2_l8qkw")
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -40.0
+offset_right = 144.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_vs8fc")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover = SubResource("StyleBoxFlat_lgqw0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bcpav")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wneb5")
+text = "Start Game"
+script = ExtResource("3_cptal")
+
+[node name="CreditsButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 388.0
+offset_top = 283.0
+offset_right = 554.0
+offset_bottom = 309.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_vs8fc")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover = SubResource("StyleBoxFlat_lgqw0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bcpav")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wneb5")
+text = "Credits"
+script = ExtResource("5_y3c0h")

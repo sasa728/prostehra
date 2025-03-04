@@ -1,0 +1,479 @@
+[gd_scene load_steps=19 format=3 uid="uid://coatgvtcldwlg"]
+
+[ext_resource type="Texture2D" uid="uid://bo7tvufudhayh" path="res://assets/textures/Other/Background.png" id="1_bjk6u"]
+[ext_resource type="Script" path="res://scripts/Battle.cs" id="1_cxd3j"]
+[ext_resource type="Texture2D" uid="uid://coqjy7028q0fi" path="res://assets/textures/Enemies/HospitalBob.png" id="2_0xfk6"]
+[ext_resource type="FontFile" uid="uid://e04wrxvglelf" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_cutit"]
+[ext_resource type="Texture2D" uid="uid://c848gsrgoafs1" path="res://assets/textures/Other/Help.png" id="4_6tekd"]
+[ext_resource type="Script" path="res://scripts/HelpQuestionmark.cs" id="6_e6eru"]
+[ext_resource type="Texture2D" uid="uid://cg26m1idely5k" path="res://assets/textures/Other/HelpScreen.png" id="6_xh8dc"]
+[ext_resource type="Script" path="res://scripts/ExitButton.cs" id="8_wyejp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yeupa"]
+bg_color = Color(0.772549, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1801p"]
+bg_color = Color(0, 0.784314, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0sfgw"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yuh58"]
+bg_color = Color(1, 0.92549, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7u7l5"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2371"]
+bg_color = Color(0, 0, 0, 0.792157)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dx1aj"]
+bg_color = Color(0.151717, 0.157506, 0.286343, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fy38x"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jdbsg"]
+bg_color = Color(1, 0.92549, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5qaxk"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Battle" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cxd3j")
+metadata/_edit_horizontal_guides_ = [67.0]
+metadata/_edit_vertical_guides_ = [576.0, 715.0, 1135.0, 439.0, 19.0]
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -22.0
+offset_right = 1161.0
+offset_bottom = 672.0
+texture = ExtResource("1_bjk6u")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="EnemyContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -120.0
+offset_top = 69.0
+offset_right = 120.0
+offset_bottom = 443.0
+grow_horizontal = 2
+
+[node name="Enemy" type="TextureRect" parent="EnemyContainer"]
+layout_mode = 2
+texture = ExtResource("2_0xfk6")
+stretch_mode = 3
+
+[node name="ProgressBar" type="ProgressBar" parent="EnemyContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_yeupa")
+theme_override_styles/fill = SubResource("StyleBoxFlat_1801p")
+step = 1.0
+value = 50.0
+show_percentage = false
+
+[node name="HpLabel" type="Label" parent="EnemyContainer/ProgressBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_cutit")
+text = "HP: X/Y"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FightButton" type="Button" parent="EnemyContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_cutit")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover = SubResource("StyleBoxFlat_0sfgw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yuh58")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7u7l5")
+text = "Fight!"
+
+[node name="PlayerPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -183.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_e2371")
+
+[node name="PlayerData" type="HBoxContainer" parent="PlayerPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_right = -18.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="PlayerStats" type="GridContainer" parent="PlayerPanel/PlayerData"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="PlayerAttack" type="Label" parent="PlayerPanel/PlayerData/PlayerStats"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_fonts/font = ExtResource("3_cutit")
+theme_override_font_sizes/font_size = 25
+text = "Attack: 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayerDefense" type="Label" parent="PlayerPanel/PlayerData/PlayerStats"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_fonts/font = ExtResource("3_cutit")
+theme_override_font_sizes/font_size = 25
+text = "Defense: 2
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayerVitality" type="Label" parent="PlayerPanel/PlayerData/PlayerStats"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_fonts/font = ExtResource("3_cutit")
+theme_override_font_sizes/font_size = 25
+text = "Vitality: 4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayerLuck" type="Label" parent="PlayerPanel/PlayerData/PlayerStats"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_fonts/font = ExtResource("3_cutit")
+theme_override_font_sizes/font_size = 25
+text = "Luck: 3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="PlayerPanel/PlayerData/PlayerStats"]
+custom_minimum_size = Vector2(350, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_yeupa")
+theme_override_styles/fill = SubResource("StyleBoxFlat_1801p")
+step = 1.0
+value = 50.0
+show_percentage = false
+
+[node name="HpLabel" type="Label" parent="PlayerPanel/PlayerData/PlayerStats/ProgressBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_cutit")
+text = "HP: X/Y"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayerMoney" type="GridContainer" parent="PlayerPanel/PlayerData"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="PlayerCoins" type="Label" parent="PlayerPanel/PlayerData/PlayerMoney"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_fonts/font = ExtResource("3_cutit")
+theme_override_font_sizes/font_size = 25
+text = "Coins: 5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayerInterrest" type="Label" parent="PlayerPanel/PlayerData/PlayerMoney"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_fonts/font = ExtResource("3_cutit")
+theme_override_font_sizes/font_size = 25
+text = "Interest: 5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnemyStats" type="GridContainer" parent="PlayerPanel/PlayerData"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="EnemyLabel" type="Label" parent="PlayerPanel/PlayerData/EnemyStats"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_fonts/font = ExtResource("3_cutit")
+theme_override_font_sizes/font_size = 25
+text = "Enemy:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnemyAttack" type="Label" parent="PlayerPanel/PlayerData/EnemyStats"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_fonts/font = ExtResource("3_cutit")
+theme_override_font_sizes/font_size = 25
+text = "Attack: 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnemyDefense" type="Label" parent="PlayerPanel/PlayerData/EnemyStats"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_fonts/font = ExtResource("3_cutit")
+theme_override_font_sizes/font_size = 25
+text = "Defense: 2
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnemyVitality" type="Label" parent="PlayerPanel/PlayerData/EnemyStats"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_fonts/font = ExtResource("3_cutit")
+theme_override_font_sizes/font_size = 25
+text = "Vitality: 4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnemyLuck" type="Label" parent="PlayerPanel/PlayerData/EnemyStats"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_fonts/font = ExtResource("3_cutit")
+theme_override_font_sizes/font_size = 25
+text = "Luck: 3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RoundLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -90.0
+offset_top = 12.0
+offset_right = 91.0
+offset_bottom = 38.0
+grow_horizontal = 2
+size_flags_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_cutit")
+theme_override_font_sizes/font_size = 34
+text = "Round: 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ShopPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = -580.0
+offset_right = -712.0
+offset_bottom = -205.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_e2371")
+
+[node name="ShopLabel" type="Label" parent="ShopPanel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -89.0
+offset_top = 10.0
+offset_right = 102.0
+offset_bottom = 36.0
+grow_horizontal = 2
+size_flags_horizontal = 2
+theme_override_fonts/font = ExtResource("3_cutit")
+theme_override_font_sizes/font_size = 25
+text = "Shop
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RerollButton" type="Button" parent="ShopPanel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -69.0
+offset_top = -30.0
+offset_right = 69.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_cutit")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover = SubResource("StyleBoxFlat_0sfgw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yuh58")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7u7l5")
+text = "Reroll"
+
+[node name="IventoryPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 714.0
+offset_top = -582.0
+offset_right = -16.0
+offset_bottom = -207.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_e2371")
+
+[node name="InventoryLabel" type="Label" parent="IventoryPanel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -101.0
+offset_top = 10.0
+offset_right = 115.0
+offset_bottom = 36.0
+grow_horizontal = 2
+size_flags_horizontal = 2
+theme_override_fonts/font = ExtResource("3_cutit")
+theme_override_font_sizes/font_size = 25
+text = "Inventory
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HelpQuestionmark" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.325
+offset_left = 1076.0
+offset_top = 7.0
+offset_right = 765.6
+offset_bottom = 60.0
+texture = ExtResource("4_6tekd")
+expand_mode = 1
+script = ExtResource("6_e6eru")
+
+[node name="HelpPanel" type="Panel" parent="HelpQuestionmark"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -1116.0
+offset_top = -138.0
+offset_right = 89.0
+offset_bottom = 624.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dx1aj")
+
+[node name="GotItButton" type="Button" parent="HelpQuestionmark/HelpPanel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -83.5
+offset_top = -94.0
+offset_right = 83.5
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_cutit")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover = SubResource("StyleBoxFlat_fy38x")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jdbsg")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5qaxk")
+text = "Got it!"
+
+[node name="HelpTexture" type="TextureRect" parent="HelpQuestionmark/HelpPanel"]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 45.0
+offset_right = 1084.0
+offset_bottom = 658.0
+texture = ExtResource("6_xh8dc")
+expand_mode = 1
+
+[node name="ExitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 12.0
+offset_right = 153.0
+offset_bottom = 38.0
+size_flags_horizontal = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_cutit")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover = SubResource("StyleBoxFlat_0sfgw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yuh58")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7u7l5")
+text = "Exit"
+script = ExtResource("8_wyejp")
