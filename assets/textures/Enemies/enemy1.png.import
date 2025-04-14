@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcu0j0bbw6i5o"
-path="res://.godot/imported/SkulletBob.png-4360e2d0b6209ec0c132e7023ce879e5.ctex"
+uid="uid://c20iq76qpb2nd"
+path="res://.godot/imported/enemy1.png-68db39d40d905ec2b58b0764d8b3c0b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/Enemies/SkulletBob.png"
-dest_files=["res://.godot/imported/SkulletBob.png-4360e2d0b6209ec0c132e7023ce879e5.ctex"]
+source_file="res://assets/textures/Enemies/enemy1.png"
+dest_files=["res://.godot/imported/enemy1.png-68db39d40d905ec2b58b0764d8b3c0b8.ctex"]
 
 [params]
 

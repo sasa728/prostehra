@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csx0mfj2bomel"
-path="res://.godot/imported/DiscoStew.png-4b734e068f3faaa3d597757aa83cf334.ctex"
+uid="uid://bfcbtb3cxwmal"
+path="res://.godot/imported/enemy2.png-e837035c41140e4d11f350579e77e859.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/Enemies/DiscoStew.png"
-dest_files=["res://.godot/imported/DiscoStew.png-4b734e068f3faaa3d597757aa83cf334.ctex"]
+source_file="res://assets/textures/Enemies/enemy2.png"
+dest_files=["res://.godot/imported/enemy2.png-e837035c41140e4d11f350579e77e859.ctex"]
 
 [params]
 

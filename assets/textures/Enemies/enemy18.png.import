@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://coqjy7028q0fi"
-path="res://.godot/imported/HospitalBob.png-a2bd304f6819e955b29c6d602051741f.ctex"
+uid="uid://x0y3dgdbx4si"
+path="res://.godot/imported/enemy18.png-bd35692dd9f7dcd886ded7a8a33b5593.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/Enemies/HospitalBob.png"
-dest_files=["res://.godot/imported/HospitalBob.png-a2bd304f6819e955b29c6d602051741f.ctex"]
+source_file="res://assets/textures/Enemies/enemy18.png"
+dest_files=["res://.godot/imported/enemy18.png-bd35692dd9f7dcd886ded7a8a33b5593.ctex"]
 
 [params]
 

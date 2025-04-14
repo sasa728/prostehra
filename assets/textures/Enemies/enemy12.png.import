@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpqqhjydlk3o1"
-path="res://.godot/imported/DarthBob.png-ebd2648e620f2bb37c665355b16af18a.ctex"
+uid="uid://dg4uy8ntakvco"
+path="res://.godot/imported/enemy12.png-07df2ad80040de3e5b7106918017e4e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/Enemies/DarthBob.png"
-dest_files=["res://.godot/imported/DarthBob.png-ebd2648e620f2bb37c665355b16af18a.ctex"]
+source_file="res://assets/textures/Enemies/enemy12.png"
+dest_files=["res://.godot/imported/enemy12.png-07df2ad80040de3e5b7106918017e4e6.ctex"]
 
 [params]
 

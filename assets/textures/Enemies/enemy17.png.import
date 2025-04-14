@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8yemwvk8bexu"
-path="res://.godot/imported/NiceDude.png-0dfe886d140bd077c4e0d4d863158ceb.ctex"
+uid="uid://bnepiadxe0cac"
+path="res://.godot/imported/enemy17.png-ce4b3c875fcd85f4569d2d996bd9eb86.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/Enemies/NiceDude.png"
-dest_files=["res://.godot/imported/NiceDude.png-0dfe886d140bd077c4e0d4d863158ceb.ctex"]
+source_file="res://assets/textures/Enemies/enemy17.png"
+dest_files=["res://.godot/imported/enemy17.png-ce4b3c875fcd85f4569d2d996bd9eb86.ctex"]
 
 [params]
 

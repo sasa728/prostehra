@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c361blo1y4c3t"
-path="res://.godot/imported/AjsikSasa.png-728bd382e7122843c8be1bb703c29aa0.ctex"
+uid="uid://sqwysyltjqvq"
+path="res://.godot/imported/enemy7.png-a9bcf9c0e7a27ded4b56bd13884fbf1d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/Enemies/AjsikSasa.png"
-dest_files=["res://.godot/imported/AjsikSasa.png-728bd382e7122843c8be1bb703c29aa0.ctex"]
+source_file="res://assets/textures/Enemies/enemy7.png"
+dest_files=["res://.godot/imported/enemy7.png-a9bcf9c0e7a27ded4b56bd13884fbf1d.ctex"]
 
 [params]
 

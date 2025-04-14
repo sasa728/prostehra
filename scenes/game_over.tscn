@@ -1,10 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://dllgeihgc1dwc"]
+[gd_scene load_steps=12 format=3 uid="uid://dy1uugncs5ukg"]
 
-[ext_resource type="Texture2D" uid="uid://bwasismjeadss" path="res://assets/textures/Other/MainMenu.png" id="1_ommmr"]
-[ext_resource type="FontFile" uid="uid://e04wrxvglelf" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_vs8fc"]
-[ext_resource type="Script" path="res://scripts/ExitButton.cs" id="2_l8qkw"]
-[ext_resource type="Script" path="res://scripts/StartButton.cs" id="3_cptal"]
-[ext_resource type="Script" path="res://scripts/CreditsButton.cs" id="5_y3c0h"]
+[ext_resource type="Texture2D" uid="uid://b65ymy1sjhpia" path="res://assets/textures/Other/gameover.png" id="1_xgasf"]
+[ext_resource type="FontFile" uid="uid://e04wrxvglelf" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_3ojov"]
+[ext_resource type="Script" path="res://scripts/ExitButton.cs" id="3_ek7ky"]
+[ext_resource type="Script" path="res://scripts/MainMenuButton.cs" id="4_06sr0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ryet1"]
 bg_color = Color(0.151717, 0.157506, 0.286343, 1)
@@ -52,11 +51,11 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_ryet1")
 
 [node name="TextureRect" type="TextureRect" parent="MenuPanel"]
 layout_mode = 0
-offset_left = 48.0
-offset_top = 11.0
-offset_right = 1165.0
-offset_bottom = 701.0
-texture = ExtResource("1_ommmr")
+offset_left = 46.0
+offset_top = 40.0
+offset_right = 1163.0
+offset_bottom = 730.0
+texture = ExtResource("1_xgasf")
 expand_mode = 1
 
 [node name="ExitButton" type="Button" parent="."]
@@ -69,15 +68,15 @@ size_flags_horizontal = 3
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("1_vs8fc")
+theme_override_fonts/font = ExtResource("2_3ojov")
 theme_override_font_sizes/font_size = 25
 theme_override_styles/hover = SubResource("StyleBoxFlat_re5rp")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_jl2k5")
 theme_override_styles/normal = SubResource("StyleBoxFlat_vfj3a")
 text = "Exit"
-script = ExtResource("2_l8qkw")
+script = ExtResource("3_ek7ky")
 
-[node name="StartButton" type="Button" parent="."]
+[node name="MainMenuButton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -94,35 +93,10 @@ size_flags_horizontal = 3
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("1_vs8fc")
+theme_override_fonts/font = ExtResource("2_3ojov")
 theme_override_font_sizes/font_size = 25
 theme_override_styles/hover = SubResource("StyleBoxFlat_lgqw0")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_bcpav")
 theme_override_styles/normal = SubResource("StyleBoxFlat_wneb5")
-text = "Start game!"
-script = ExtResource("3_cptal")
-
-[node name="CreditsButton" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 388.0
-offset_top = 283.0
-offset_right = 554.0
-offset_bottom = 309.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("1_vs8fc")
-theme_override_font_sizes/font_size = 25
-theme_override_styles/hover = SubResource("StyleBoxFlat_lgqw0")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_bcpav")
-theme_override_styles/normal = SubResource("StyleBoxFlat_wneb5")
-text = "Credits"
-script = ExtResource("5_y3c0h")
+text = "Main menu"
+script = ExtResource("4_06sr0")

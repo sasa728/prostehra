@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://g0bigfk6i5ht"
-path="res://.godot/imported/PraySasa.png-c76087d4ab0483164c3b295bef2fb8c6.ctex"
+uid="uid://b65ymy1sjhpia"
+path="res://.godot/imported/gameover.png-50474fdb79f1013250883b768910745e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/Enemies/PraySasa.png"
-dest_files=["res://.godot/imported/PraySasa.png-c76087d4ab0483164c3b295bef2fb8c6.ctex"]
+source_file="res://assets/textures/Other/gameover.png"
+dest_files=["res://.godot/imported/gameover.png-50474fdb79f1013250883b768910745e.ctex"]
 
 [params]
 

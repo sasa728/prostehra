@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br4l5bbixnvdh"
-path="res://.godot/imported/DrunkMan.png-036e4575637e937a813b70e4d80167e4.ctex"
+uid="uid://vok5ulp6whi"
+path="res://.godot/imported/enemy10.png-ec89ba891129f44dd28cb61e4d74b223.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/Enemies/DrunkMan.png"
-dest_files=["res://.godot/imported/DrunkMan.png-036e4575637e937a813b70e4d80167e4.ctex"]
+source_file="res://assets/textures/Enemies/enemy10.png"
+dest_files=["res://.godot/imported/enemy10.png-ec89ba891129f44dd28cb61e4d74b223.ctex"]
 
 [params]
 

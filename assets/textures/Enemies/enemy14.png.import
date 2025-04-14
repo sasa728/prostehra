@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvi5cdbk17nkp"
-path="res://.godot/imported/MovermberGuy.png-a48be707b332cf1cfdb9e566631f220d.ctex"
+uid="uid://c80v2wp44fasm"
+path="res://.godot/imported/enemy14.png-ca1cf0bbeeefdc3ab6481ebe9841853a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/Enemies/MovermberGuy.png"
-dest_files=["res://.godot/imported/MovermberGuy.png-a48be707b332cf1cfdb9e566631f220d.ctex"]
+source_file="res://assets/textures/Enemies/enemy14.png"
+dest_files=["res://.godot/imported/enemy14.png-ca1cf0bbeeefdc3ab6481ebe9841853a.ctex"]
 
 [params]
 

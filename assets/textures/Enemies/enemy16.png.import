@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b37exiawlwl8l"
-path="res://.godot/imported/BurgirKvatro.png-29adab12eb17d940f8bfa9886a5b11e6.ctex"
+uid="uid://bsqiiefamx3rm"
+path="res://.godot/imported/enemy16.png-50c53e6dfae107f6cbd51a2caf8ec759.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/Enemies/BurgirKvatro.png"
-dest_files=["res://.godot/imported/BurgirKvatro.png-29adab12eb17d940f8bfa9886a5b11e6.ctex"]
+source_file="res://assets/textures/Enemies/enemy16.png"
+dest_files=["res://.godot/imported/enemy16.png-50c53e6dfae107f6cbd51a2caf8ec759.ctex"]
 
 [params]
 

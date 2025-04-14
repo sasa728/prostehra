@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dq00mxpyyr4xw"
-path="res://.godot/imported/WineEnjoyer.png-d82558d5166c5602171118b2de8df19e.ctex"
+uid="uid://dp3ym6a8gneu0"
+path="res://.godot/imported/enemy8.png-2c6e01cf9a34d63803cd161604ad48b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/Enemies/WineEnjoyer.png"
-dest_files=["res://.godot/imported/WineEnjoyer.png-d82558d5166c5602171118b2de8df19e.ctex"]
+source_file="res://assets/textures/Enemies/enemy8.png"
+dest_files=["res://.godot/imported/enemy8.png-2c6e01cf9a34d63803cd161604ad48b8.ctex"]
 
 [params]
 

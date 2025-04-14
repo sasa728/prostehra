@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfebuq0kaiyp1"
-path="res://.godot/imported/PunkSasa.png-079ecf8b82242f05eda5bdb916341ae9.ctex"
+uid="uid://bh1dmva3000pf"
+path="res://.godot/imported/enemy6.png-1cb583bd8bd26a7058ad528bc3fccd3d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/Enemies/PunkSasa.png"
-dest_files=["res://.godot/imported/PunkSasa.png-079ecf8b82242f05eda5bdb916341ae9.ctex"]
+source_file="res://assets/textures/Enemies/enemy6.png"
+dest_files=["res://.godot/imported/enemy6.png-1cb583bd8bd26a7058ad528bc3fccd3d.ctex"]
 
 [params]
 

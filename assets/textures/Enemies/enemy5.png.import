@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btl7pnyn7xfx8"
-path="res://.godot/imported/BeerUser.png-98be5638913b422ed51a5eacd51bd6c8.ctex"
+uid="uid://5v48vxfbmd0k"
+path="res://.godot/imported/enemy5.png-b74ef4426fd757c211ec5d7d7ceb0cd7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/Enemies/BeerUser.png"
-dest_files=["res://.godot/imported/BeerUser.png-98be5638913b422ed51a5eacd51bd6c8.ctex"]
+source_file="res://assets/textures/Enemies/enemy5.png"
+dest_files=["res://.godot/imported/enemy5.png-b74ef4426fd757c211ec5d7d7ceb0cd7.ctex"]
 
 [params]
 

@@ -1,13 +1,14 @@
-[gd_scene load_steps=19 format=3 uid="uid://coatgvtcldwlg"]
+[gd_scene load_steps=21 format=3 uid="uid://coatgvtcldwlg"]
 
 [ext_resource type="Texture2D" uid="uid://bo7tvufudhayh" path="res://assets/textures/Other/Background.png" id="1_bjk6u"]
 [ext_resource type="Script" path="res://scripts/Battle.cs" id="1_cxd3j"]
-[ext_resource type="Texture2D" uid="uid://coqjy7028q0fi" path="res://assets/textures/Enemies/HospitalBob.png" id="2_0xfk6"]
+[ext_resource type="Texture2D" path="res://assets/textures/Enemies/HospitalBob.png" id="2_0xfk6"]
 [ext_resource type="FontFile" uid="uid://e04wrxvglelf" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_cutit"]
 [ext_resource type="Texture2D" uid="uid://c848gsrgoafs1" path="res://assets/textures/Other/Help.png" id="4_6tekd"]
 [ext_resource type="Script" path="res://scripts/HelpQuestionmark.cs" id="6_e6eru"]
 [ext_resource type="Texture2D" uid="uid://cg26m1idely5k" path="res://assets/textures/Other/HelpScreen.png" id="6_xh8dc"]
 [ext_resource type="Script" path="res://scripts/ExitButton.cs" id="8_wyejp"]
+[ext_resource type="Texture2D" uid="uid://ssxkhk4j4rb0" path="res://assets/textures/Other/HeartFull.png" id="8_ybr14"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yeupa"]
 bg_color = Color(0.772549, 0, 0, 1)
@@ -56,6 +57,9 @@ bg_color = Color(1, 0.92549, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5qaxk"]
 bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yas8u"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="Battle" type="Control"]
 layout_mode = 3
@@ -459,6 +463,38 @@ offset_right = 1084.0
 offset_bottom = 658.0
 texture = ExtResource("6_xh8dc")
 expand_mode = 1
+
+[node name="LivesPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 482.0
+offset_top = 473.0
+offset_right = 712.0
+offset_bottom = 528.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_yas8u")
+
+[node name="Live1" type="TextureRect" parent="LivesPanel"]
+layout_mode = 0
+offset_left = -4.0
+offset_right = 52.0
+offset_bottom = 56.0
+texture = ExtResource("8_ybr14")
+expand_mode = 2
+
+[node name="Live2" type="TextureRect" parent="LivesPanel"]
+offset_left = 80.0
+offset_top = 1.0
+offset_right = 136.0
+offset_bottom = 56.0
+texture = ExtResource("8_ybr14")
+expand_mode = 2
+
+[node name="Live3" type="TextureRect" parent="LivesPanel"]
+offset_left = 156.0
+offset_top = 3.0
+offset_right = 211.0
+offset_bottom = 56.0
+texture = ExtResource("8_ybr14")
+expand_mode = 2
 
 [node name="ExitButton" type="Button" parent="."]
 layout_mode = 0
