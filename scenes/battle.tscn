@@ -1,12 +1,13 @@
-[gd_scene load_steps=21 format=3 uid="uid://coatgvtcldwlg"]
+[gd_scene load_steps=22 format=3 uid="uid://coatgvtcldwlg"]
 
 [ext_resource type="Texture2D" uid="uid://bo7tvufudhayh" path="res://assets/textures/Other/Background.png" id="1_bjk6u"]
 [ext_resource type="Script" path="res://scripts/Battle.cs" id="1_cxd3j"]
-[ext_resource type="Texture2D" path="res://assets/textures/Enemies/HospitalBob.png" id="2_0xfk6"]
+[ext_resource type="Texture2D" uid="uid://vok5ulp6whi" path="res://assets/textures/Enemies/enemy10.png" id="2_0xfk6"]
 [ext_resource type="FontFile" uid="uid://e04wrxvglelf" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_cutit"]
 [ext_resource type="Texture2D" uid="uid://c848gsrgoafs1" path="res://assets/textures/Other/Help.png" id="4_6tekd"]
 [ext_resource type="Script" path="res://scripts/HelpQuestionmark.cs" id="6_e6eru"]
 [ext_resource type="Texture2D" uid="uid://cg26m1idely5k" path="res://assets/textures/Other/HelpScreen.png" id="6_xh8dc"]
+[ext_resource type="Texture2D" uid="uid://cvnlnwc3ngvlt" path="res://assets/textures/Other/Coin.png" id="8_6w3l2"]
 [ext_resource type="Script" path="res://scripts/ExitButton.cs" id="8_wyejp"]
 [ext_resource type="Texture2D" uid="uid://ssxkhk4j4rb0" path="res://assets/textures/Other/HeartFull.png" id="8_ybr14"]
 
@@ -405,6 +406,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="HelpQuestionmark" type="TextureRect" parent="."]
+top_level = true
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.325
@@ -464,6 +466,63 @@ offset_bottom = 658.0
 texture = ExtResource("6_xh8dc")
 expand_mode = 1
 
+[node name="InterestPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.042
+anchor_bottom = 0.033
+offset_left = 440.0
+offset_top = 583.0
+offset_right = 670.532
+offset_bottom = 623.55
+theme_override_styles/panel = SubResource("StyleBoxFlat_yas8u")
+
+[node name="Coin5" type="TextureRect" parent="InterestPanel"]
+visible = false
+offset_left = 225.0
+offset_top = 6.0
+offset_right = 281.0
+offset_bottom = 62.0
+texture = ExtResource("8_6w3l2")
+expand_mode = 2
+
+[node name="Coin4" type="TextureRect" parent="InterestPanel"]
+visible = false
+offset_left = 166.0
+offset_top = 6.0
+offset_right = 222.0
+offset_bottom = 62.0
+texture = ExtResource("8_6w3l2")
+expand_mode = 2
+
+[node name="Coin3" type="TextureRect" parent="InterestPanel"]
+visible = false
+offset_left = 107.0
+offset_top = 5.0
+offset_right = 163.0
+offset_bottom = 61.0
+texture = ExtResource("8_6w3l2")
+expand_mode = 2
+
+[node name="Coin2" type="TextureRect" parent="InterestPanel"]
+visible = false
+offset_left = 49.0
+offset_top = 4.0
+offset_right = 105.0
+offset_bottom = 60.0
+texture = ExtResource("8_6w3l2")
+expand_mode = 2
+
+[node name="Coin1" type="TextureRect" parent="InterestPanel"]
+visible = false
+layout_mode = 0
+offset_left = -10.0
+offset_top = 4.0
+offset_right = 46.0
+offset_bottom = 60.0
+texture = ExtResource("8_6w3l2")
+expand_mode = 2
+
 [node name="LivesPanel" type="Panel" parent="."]
 layout_mode = 0
 offset_left = 482.0
@@ -481,6 +540,7 @@ texture = ExtResource("8_ybr14")
 expand_mode = 2
 
 [node name="Live2" type="TextureRect" parent="LivesPanel"]
+layout_mode = 0
 offset_left = 80.0
 offset_top = 1.0
 offset_right = 136.0
@@ -489,6 +549,7 @@ texture = ExtResource("8_ybr14")
 expand_mode = 2
 
 [node name="Live3" type="TextureRect" parent="LivesPanel"]
+layout_mode = 0
 offset_left = 156.0
 offset_top = 3.0
 offset_right = 211.0

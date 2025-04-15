@@ -11,7 +11,7 @@ public partial class Battle : Control
 		public int Vitality = 10;
 		public int CurrentVitality;
 		public int Luck = 1;
-		public int Coins = 50;
+		public int Coins = 4;
 		public int Lives = 3;
 
 		public int MaxVitality => Vitality * 10;
@@ -44,7 +44,10 @@ public partial class Battle : Control
 	private TextureRect _enemyTexture;
 	private Button _fightButton;
 	private TextureRect[] _hearts;
+	private Label _roundLabel; // Nový label pro kolo
 
+ 	private TextureRect[] _interestCoins; // Přidáno pro úrokové mince
+	
 	public override void _Ready()
 	{
 		InitializeUIReferences();
@@ -60,11 +63,25 @@ public partial class Battle : Control
 			GetNode<TextureRect>("LivesPanel/Live2"),
 			GetNode<TextureRect>("LivesPanel/Live3")
 		};
+		
+		_interestCoins = new TextureRect[5]
+		{
+			GetNode<TextureRect>("InterestPanel/Coin1"),
+			GetNode<TextureRect>("InterestPanel/Coin2"),
+			GetNode<TextureRect>("InterestPanel/Coin3"),
+			GetNode<TextureRect>("InterestPanel/Coin4"),
+			GetNode<TextureRect>("InterestPanel/Coin5")
+		};
+		
+		
+
+	
 		UpdateHeartsUI();
 	}
 
 	private void InitializeUIReferences()
 	{
+		// Hráč
 		_attackLabel = GetNode<Label>("PlayerPanel/PlayerData/PlayerStats/PlayerAttack");
 		_defenseLabel = GetNode<Label>("PlayerPanel/PlayerData/PlayerStats/PlayerDefense");
 		_vitalityLabel = GetNode<Label>("PlayerPanel/PlayerData/PlayerStats/PlayerVitality");
@@ -73,7 +90,9 @@ public partial class Battle : Control
 		_hpValueLabel = GetNode<Label>("PlayerPanel/PlayerData/PlayerStats/ProgressBar/HpLabel");
 		_coinsLabel = GetNode<Label>("PlayerPanel/PlayerData/PlayerMoney/PlayerCoins");
 		_interestLabel = GetNode<Label>("PlayerPanel/PlayerData/PlayerMoney/PlayerInterrest");
+		_roundLabel = GetNode<Label>("RoundLabel"); // Načtení RoundLabel
 
+		// Nepřítel
 		_enemyAttackLabel = GetNode<Label>("PlayerPanel/PlayerData/EnemyStats/EnemyAttack");
 		_enemyDefenseLabel = GetNode<Label>("PlayerPanel/PlayerData/EnemyStats/EnemyDefense");
 		_enemyHpBar = GetNode<ProgressBar>("EnemyContainer/ProgressBar");
@@ -116,6 +135,14 @@ public partial class Battle : Control
 		int interestBonus = Math.Min(_player.Coins / 5, 5);
 		_player.Coins += _currentRound + interestBonus;
 		_currentRound++;
+		
+		// Kontrola výhry
+		if(_currentRound >= 15)
+		{
+			GetTree().ChangeSceneToFile("res://scenes/game_won.tscn");
+			return;
+		}
+		
 		GenerateNewEnemy();
 		RefreshUI();
 	}
@@ -128,13 +155,16 @@ public partial class Battle : Control
 		
 		if (_player.Lives <= 0)
 		{
-			// Načtení game_over scény
 			GetTree().ChangeSceneToFile("res://scenes/game_over.tscn");
 		}
 	}
 
 	private void RefreshUI()
 	{
+		// Aktualizace RoundLabel
+		_roundLabel.Text = $"Kolo: {_currentRound}";
+		
+		// Hráč
 		_attackLabel.Text = $"Útok: {_player.Attack}";
 		_defenseLabel.Text = $"Obrana: {_player.Defense}";
 		_vitalityLabel.Text = $"Vitalita: {_player.Vitality}";
@@ -147,11 +177,34 @@ public partial class Battle : Control
 		int currentInterest = Math.Min(_player.Coins / 5, 5);
 		_interestLabel.Text = $"Úrok: +{currentInterest}";
 
+		 UpdateInterestCoinsUI(currentInterest);
+
+		// Nepřítel
 		_enemyAttackLabel.Text = $"Útok: {_enemy.Attack}";
 		_enemyDefenseLabel.Text = $"Obrana: {_enemy.Defense}";
 		_enemyHpBar.MaxValue = _enemy.MaxVitality;
 		_enemyHpBar.Value = _enemy.CurrentVitality;
 		_enemyHpLabel.Text = $"{_enemy.CurrentVitality}/{_enemy.MaxVitality}";
+		
+		
+	}
+	
+	private void UpdateInterestCoinsUI(int currentInterest)
+	{
+		// Bezpečnostní kontrola
+		if (_interestCoins == null || _interestCoins.Length == 0)
+		{
+			// GD.Print("Mince ještě nebyly inicializovány");
+			return;
+		}
+
+		for (int i = 0; i < _interestCoins.Length; i++)
+		{
+			if (_interestCoins[i] != null)
+			{
+				_interestCoins[i].Visible = (i + 1) <= currentInterest;
+			}
+		}
 	}
 
 	private void UpdateHeartsUI()
