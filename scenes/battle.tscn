@@ -1,10 +1,11 @@
-[gd_scene load_steps=22 format=3 uid="uid://coatgvtcldwlg"]
+[gd_scene load_steps=23 format=3 uid="uid://coatgvtcldwlg"]
 
 [ext_resource type="Texture2D" uid="uid://bo7tvufudhayh" path="res://assets/textures/Other/Background.png" id="1_bjk6u"]
 [ext_resource type="Script" path="res://scripts/Battle.cs" id="1_cxd3j"]
 [ext_resource type="Texture2D" uid="uid://vok5ulp6whi" path="res://assets/textures/Enemies/enemy10.png" id="2_0xfk6"]
 [ext_resource type="FontFile" uid="uid://e04wrxvglelf" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_cutit"]
 [ext_resource type="Texture2D" uid="uid://c848gsrgoafs1" path="res://assets/textures/Other/Help.png" id="4_6tekd"]
+[ext_resource type="Texture2D" uid="uid://b2s3y0412o5ip" path="res://assets/textures/Shop/food.png" id="5_8iyih"]
 [ext_resource type="Script" path="res://scripts/HelpQuestionmark.cs" id="6_e6eru"]
 [ext_resource type="Texture2D" uid="uid://cg26m1idely5k" path="res://assets/textures/Other/HelpScreen.png" id="6_xh8dc"]
 [ext_resource type="Texture2D" uid="uid://cvnlnwc3ngvlt" path="res://assets/textures/Other/Coin.png" id="8_6w3l2"]
@@ -72,7 +73,7 @@ offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_cxd3j")
-metadata/_edit_horizontal_guides_ = [67.0]
+metadata/_edit_horizontal_guides_ = [67.0, 133.0]
 metadata/_edit_vertical_guides_ = [576.0, 715.0, 1135.0, 439.0, 19.0]
 
 [node name="Background" type="TextureRect" parent="."]
@@ -371,7 +372,112 @@ theme_override_font_sizes/font_size = 25
 theme_override_styles/hover = SubResource("StyleBoxFlat_0sfgw")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_yuh58")
 theme_override_styles/normal = SubResource("StyleBoxFlat_7u7l5")
-text = "Reroll"
+text = "Reroll 1$"
+
+[node name="ItemSlot4" type="TextureRect" parent="ShopPanel"]
+offset_left = 241.0
+offset_top = 204.0
+offset_right = 369.0
+offset_bottom = 323.0
+texture = ExtResource("5_8iyih")
+expand_mode = 2
+
+[node name="ItemSlot4Label" type="Label" parent="ShopPanel/ItemSlot4"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -47.0
+offset_top = 103.0
+offset_right = 51.0
+offset_bottom = 141.0
+grow_horizontal = 2
+size_flags_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_cutit")
+theme_override_font_sizes/font_size = 15
+text = "1 Coin"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ItemSlot3" type="TextureRect" parent="ShopPanel"]
+offset_left = 62.0
+offset_top = 202.0
+offset_right = 190.0
+offset_bottom = 321.0
+texture = ExtResource("5_8iyih")
+expand_mode = 2
+
+[node name="ItemSlot3Label" type="Label" parent="ShopPanel/ItemSlot3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -47.0
+offset_top = 103.0
+offset_right = 51.0
+offset_bottom = 141.0
+grow_horizontal = 2
+size_flags_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_cutit")
+theme_override_font_sizes/font_size = 15
+text = "1 Coin"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ItemSlot2" type="TextureRect" parent="ShopPanel"]
+offset_left = 241.0
+offset_top = 63.0
+offset_right = 369.0
+offset_bottom = 182.0
+texture = ExtResource("5_8iyih")
+expand_mode = 2
+
+[node name="ItemSlot2Label" type="Label" parent="ShopPanel/ItemSlot2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -47.0
+offset_top = 103.0
+offset_right = 51.0
+offset_bottom = 141.0
+grow_horizontal = 2
+size_flags_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_cutit")
+theme_override_font_sizes/font_size = 15
+text = "1 Coin"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ItemSlot1" type="TextureRect" parent="ShopPanel"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 63.0
+offset_right = 190.0
+offset_bottom = 182.0
+texture = ExtResource("5_8iyih")
+expand_mode = 2
+
+[node name="ItemSlot1Label" type="Label" parent="ShopPanel/ItemSlot1"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.0
+offset_top = 101.0
+offset_right = 43.0
+offset_bottom = 139.0
+grow_horizontal = 2
+size_flags_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_cutit")
+theme_override_font_sizes/font_size = 15
+text = "1 Coin"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="IventoryPanel" type="Panel" parent="."]
 layout_mode = 1
@@ -404,6 +510,38 @@ text = "Inventory
 "
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="InventorySlot4" type="TextureRect" parent="IventoryPanel"]
+offset_left = 261.0
+offset_top = 206.0
+offset_right = 389.0
+offset_bottom = 325.0
+texture = ExtResource("5_8iyih")
+expand_mode = 2
+
+[node name="InventorySlot3" type="TextureRect" parent="IventoryPanel"]
+offset_left = 73.0
+offset_top = 206.0
+offset_right = 201.0
+offset_bottom = 325.0
+texture = ExtResource("5_8iyih")
+expand_mode = 2
+
+[node name="InventorySlot2" type="TextureRect" parent="IventoryPanel"]
+offset_left = 261.0
+offset_top = 65.0
+offset_right = 389.0
+offset_bottom = 184.0
+texture = ExtResource("5_8iyih")
+expand_mode = 2
+
+[node name="InventorySlot1" type="TextureRect" parent="IventoryPanel"]
+offset_left = 73.0
+offset_top = 65.0
+offset_right = 201.0
+offset_bottom = 184.0
+texture = ExtResource("5_8iyih")
+expand_mode = 2
 
 [node name="HelpQuestionmark" type="TextureRect" parent="."]
 top_level = true
@@ -505,7 +643,6 @@ texture = ExtResource("8_6w3l2")
 expand_mode = 2
 
 [node name="Coin2" type="TextureRect" parent="InterestPanel"]
-visible = false
 offset_left = 49.0
 offset_top = 4.0
 offset_right = 105.0
@@ -514,7 +651,6 @@ texture = ExtResource("8_6w3l2")
 expand_mode = 2
 
 [node name="Coin1" type="TextureRect" parent="InterestPanel"]
-visible = false
 layout_mode = 0
 offset_left = -10.0
 offset_top = 4.0
