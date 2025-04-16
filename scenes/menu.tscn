@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://dllgeihgc1dwc"]
+[gd_scene load_steps=14 format=3 uid="uid://dllgeihgc1dwc"]
 
 [ext_resource type="Texture2D" uid="uid://bwasismjeadss" path="res://assets/textures/Other/MainMenu.png" id="1_ommmr"]
 [ext_resource type="FontFile" uid="uid://e04wrxvglelf" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_vs8fc"]
 [ext_resource type="Script" path="res://scripts/ExitButton.cs" id="2_l8qkw"]
 [ext_resource type="Script" path="res://scripts/StartButton.cs" id="3_cptal"]
 [ext_resource type="Script" path="res://scripts/CreditsButton.cs" id="5_y3c0h"]
+[ext_resource type="AudioStream" uid="uid://dvxofeb4d5apc" path="res://assets/music/menusound.mp3" id="6_b2arc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ryet1"]
 bg_color = Color(0.151717, 0.157506, 0.286343, 1)
@@ -126,3 +127,8 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_bcpav")
 theme_override_styles/normal = SubResource("StyleBoxFlat_wneb5")
 text = "Credits"
 script = ExtResource("5_y3c0h")
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_b2arc")
+autoplay = true
+parameters/looping = true

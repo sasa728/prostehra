@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://coatgvtcldwlg"]
+[gd_scene load_steps=27 format=3 uid="uid://coatgvtcldwlg"]
 
 [ext_resource type="Texture2D" uid="uid://bo7tvufudhayh" path="res://assets/textures/Other/Background.png" id="1_bjk6u"]
 [ext_resource type="Script" path="res://scripts/Battle.cs" id="1_cxd3j"]
@@ -11,6 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://cvnlnwc3ngvlt" path="res://assets/textures/Other/Coin.png" id="8_6w3l2"]
 [ext_resource type="Script" path="res://scripts/ExitButton.cs" id="8_wyejp"]
 [ext_resource type="Texture2D" uid="uid://ssxkhk4j4rb0" path="res://assets/textures/Other/HeartFull.png" id="8_ybr14"]
+[ext_resource type="AudioStream" uid="uid://c36p8n5jq8x0e" path="res://assets/music/buysound.mp3" id="12_trx8s"]
+[ext_resource type="AudioStream" uid="uid://dge46luali1y" path="res://assets/music/fightsound.mp3" id="13_gesaj"]
+[ext_resource type="AudioStream" uid="uid://cbxgjr0owvx0a" path="res://assets/music/rerollsound.mp3" id="14_he1fb"]
+[ext_resource type="AudioStream" uid="uid://csbanm3rfyn22" path="res://assets/music/gamesound.mp3" id="15_i4y1v"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yeupa"]
 bg_color = Color(0.772549, 0, 0, 1)
@@ -375,6 +379,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_7u7l5")
 text = "Reroll 1$"
 
 [node name="ItemSlot4" type="TextureRect" parent="ShopPanel"]
+layout_mode = 0
 offset_left = 241.0
 offset_top = 204.0
 offset_right = 369.0
@@ -401,6 +406,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ItemSlot3" type="TextureRect" parent="ShopPanel"]
+layout_mode = 0
 offset_left = 62.0
 offset_top = 202.0
 offset_right = 190.0
@@ -427,6 +433,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ItemSlot2" type="TextureRect" parent="ShopPanel"]
+layout_mode = 0
 offset_left = 241.0
 offset_top = 63.0
 offset_right = 369.0
@@ -512,6 +519,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="InventorySlot4" type="TextureRect" parent="IventoryPanel"]
+layout_mode = 0
 offset_left = 261.0
 offset_top = 206.0
 offset_right = 389.0
@@ -520,6 +528,7 @@ texture = ExtResource("5_8iyih")
 expand_mode = 2
 
 [node name="InventorySlot3" type="TextureRect" parent="IventoryPanel"]
+layout_mode = 0
 offset_left = 73.0
 offset_top = 206.0
 offset_right = 201.0
@@ -528,6 +537,7 @@ texture = ExtResource("5_8iyih")
 expand_mode = 2
 
 [node name="InventorySlot2" type="TextureRect" parent="IventoryPanel"]
+layout_mode = 0
 offset_left = 261.0
 offset_top = 65.0
 offset_right = 389.0
@@ -536,6 +546,7 @@ texture = ExtResource("5_8iyih")
 expand_mode = 2
 
 [node name="InventorySlot1" type="TextureRect" parent="IventoryPanel"]
+layout_mode = 0
 offset_left = 73.0
 offset_top = 65.0
 offset_right = 201.0
@@ -617,6 +628,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_yas8u")
 
 [node name="Coin5" type="TextureRect" parent="InterestPanel"]
 visible = false
+layout_mode = 0
 offset_left = 225.0
 offset_top = 6.0
 offset_right = 281.0
@@ -626,6 +638,7 @@ expand_mode = 2
 
 [node name="Coin4" type="TextureRect" parent="InterestPanel"]
 visible = false
+layout_mode = 0
 offset_left = 166.0
 offset_top = 6.0
 offset_right = 222.0
@@ -635,6 +648,7 @@ expand_mode = 2
 
 [node name="Coin3" type="TextureRect" parent="InterestPanel"]
 visible = false
+layout_mode = 0
 offset_left = 107.0
 offset_top = 5.0
 offset_right = 163.0
@@ -643,6 +657,7 @@ texture = ExtResource("8_6w3l2")
 expand_mode = 2
 
 [node name="Coin2" type="TextureRect" parent="InterestPanel"]
+layout_mode = 0
 offset_left = 49.0
 offset_top = 4.0
 offset_right = 105.0
@@ -710,3 +725,17 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_yuh58")
 theme_override_styles/normal = SubResource("StyleBoxFlat_7u7l5")
 text = "Exit"
 script = ExtResource("8_wyejp")
+
+[node name="RerollSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_he1fb")
+
+[node name="FightSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_gesaj")
+
+[node name="BuySound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_trx8s")
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_i4y1v")
+volume_db = -15.244
+parameters/looping = true

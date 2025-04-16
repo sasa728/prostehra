@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://bw0ehnyieguja"]
+[gd_scene load_steps=13 format=3 uid="uid://bw0ehnyieguja"]
 
 [ext_resource type="Texture2D" uid="uid://b0c1o6rh0qpib" path="res://assets/textures/Other/gamewonmygame.png" id="1_yp2oh"]
 [ext_resource type="FontFile" uid="uid://e04wrxvglelf" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_swhmr"]
 [ext_resource type="Script" path="res://scripts/ExitButton.cs" id="3_g2aur"]
 [ext_resource type="Script" path="res://scripts/MainMenuButton.cs" id="4_l4eux"]
+[ext_resource type="AudioStream" uid="uid://bq6xhexx0f31p" path="res://assets/music/wonsound.mp3" id="5_ij7xq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ryet1"]
 bg_color = Color(0.151717, 0.157506, 0.286343, 1)
@@ -100,3 +101,8 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_bcpav")
 theme_override_styles/normal = SubResource("StyleBoxFlat_wneb5")
 text = "Main menu"
 script = ExtResource("4_l4eux")
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_ij7xq")
+autoplay = true
+parameters/looping = true

@@ -88,6 +88,12 @@ public partial class Battle : Control
 	private Label[] _shopPriceLabels = new Label[4];
 	private TextureRect[] _inventorySlots = new TextureRect[4];
 	private Button _rerollButton;
+	
+	// zvuky
+	private AudioStreamPlayer _buySound;
+	private AudioStreamPlayer _fightSound;
+	private AudioStreamPlayer _rerollSound;
+	private AudioStreamPlayer _backgroundMusic;
 
 	public override void _Ready()
 	{
@@ -115,6 +121,26 @@ public partial class Battle : Control
 			GetNode<TextureRect>("InterestPanel/Coin4"),
 			GetNode<TextureRect>("InterestPanel/Coin5")
 		};
+		
+		try
+		{	_buySound = GetNode<AudioStreamPlayer>("BuySound");
+			_fightSound = GetNode<AudioStreamPlayer>("FightSound");
+			_rerollSound = GetNode<AudioStreamPlayer>("RerollSound");
+			_backgroundMusic = GetNode<AudioStreamPlayer>("BackgroundMusic");
+			if (!_backgroundMusic.Playing)
+			{
+				_backgroundMusic.Play();
+			}
+		}
+		catch (Exception e)
+		{
+			GD.PrintErr($"Sound initialization error: {e.Message}");
+		}
+		
+		if (!_backgroundMusic.Playing)
+		{
+			_backgroundMusic.Play();
+		}
 		
 		UpdateHeartsUI();
 	}
@@ -222,7 +248,7 @@ public partial class Battle : Control
 			if (_player.Coins >= item.Price)
 			{
 				_player.Coins -= item.Price;
-				
+				_buySound.Play();
 				if (IsPermanentItem(item.Type))
 				{
 					ApplyImmediateEffect(item);
@@ -279,6 +305,7 @@ public partial class Battle : Control
 		if (_player.Coins >= 1)
 		{
 			_player.Coins--;
+			_rerollSound.Play();
 			GenerateShopItems();
 			UpdateShopUI();
 			RefreshUI();
@@ -292,6 +319,7 @@ public partial class Battle : Control
 			if (slotIndex >= _inventory.Count) return;
 
 			var item = _inventory[slotIndex];
+			_buySound.Play(); // DAT LEVEL UP SOUND
 			UseItem(item);
 			_inventory.RemoveAt(slotIndex);
 			UpdateInventoryUI();
@@ -368,6 +396,8 @@ public partial class Battle : Control
 
 	private void OnFightButtonPressed()
 	{
+		_fightSound.Play();
+		
 		_player.Attack = _player.BaseAttack + _tempAttackBoost;
 		_player.Defense = _player.BaseDefense + _tempDefenseBoost;
 		_player.Luck = _player.BaseLuck + _tempLuckBoost;
