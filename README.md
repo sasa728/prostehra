@@ -37,6 +37,7 @@ YouTube
 Tento projekt slouží výhradně pro nekomerční účely jako školní zadání. Všechny zdroje třetích stran jsou použity v souladu s podmínkami konkrétních platforem.
 
 📁 Spuštění hry
+
 Běžte do branche master (neumím s gitem)
 
 Otevřete projekt v Godotu
