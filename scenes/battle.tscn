@@ -634,9 +634,9 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.042
 anchor_bottom = 0.033
-offset_left = 440.0
+offset_left = 445.0
 offset_top = 583.0
-offset_right = 670.532
+offset_right = 675.532
 offset_bottom = 623.55
 theme_override_styles/panel = SubResource("StyleBoxFlat_yas8u")
 

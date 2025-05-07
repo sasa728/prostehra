@@ -402,7 +402,7 @@ public partial class Battle : Control
 
 	private void OnFightButtonPressed()
 	{
-		// lock shop
+		// lock shop on fight start
 		_DuringFightLockPanel = GetNode<Panel>("ShopPanel/DuringFightLockPanel");
 		_DuringFightLockPanel.Visible = true;
 		
@@ -461,6 +461,10 @@ public partial class Battle : Control
 
 	private void LoseLife()
 	{
+		// unlock shop on loselife
+		_DuringFightLockPanel = GetNode<Panel>("ShopPanel/DuringFightLockPanel");
+		_DuringFightLockPanel.Visible = false;
+		
 		_player.Lives--;
 		_player.CurrentVitality = _player.MaxVitality;
 		UpdateHeartsUI();
