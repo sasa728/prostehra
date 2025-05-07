@@ -38,7 +38,7 @@ Tento projekt slouží výhradně pro nekomerční účely jako školní zadán�
 
 📁 Spuštění hry
 
-Otevřete projekt v Godotu
+Otevřete projekt v Godotu / stáhněte obsah složky full game export
 
 Spusťte scénu Battle.tscn / pokrocileprogramovani.exe
 
