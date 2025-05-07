@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://coatgvtcldwlg"]
+[gd_scene load_steps=28 format=3 uid="uid://coatgvtcldwlg"]
 
 [ext_resource type="Texture2D" uid="uid://bo7tvufudhayh" path="res://assets/textures/Other/Background.png" id="1_bjk6u"]
 [ext_resource type="Script" path="res://scripts/Battle.cs" id="1_cxd3j"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c848gsrgoafs1" path="res://assets/textures/Other/Help.png" id="4_6tekd"]
 [ext_resource type="Texture2D" uid="uid://b2s3y0412o5ip" path="res://assets/textures/Shop/food.png" id="5_8iyih"]
 [ext_resource type="Script" path="res://scripts/HelpQuestionmark.cs" id="6_e6eru"]
+[ext_resource type="Texture2D" uid="uid://c60bn140ph1v2" path="res://assets/textures/Other/lock.png" id="6_mdebj"]
 [ext_resource type="Texture2D" uid="uid://cg26m1idely5k" path="res://assets/textures/Other/HelpScreen.png" id="6_xh8dc"]
 [ext_resource type="Texture2D" uid="uid://cvnlnwc3ngvlt" path="res://assets/textures/Other/Coin.png" id="8_6w3l2"]
 [ext_resource type="Script" path="res://scripts/ExitButton.cs" id="8_wyejp"]
@@ -485,6 +486,19 @@ theme_override_font_sizes/font_size = 15
 text = "1 Coin"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="DuringFightLockPanel" type="Panel" parent="ShopPanel"]
+visible = false
+layout_mode = 0
+offset_right = 422.0
+offset_bottom = 376.0
+
+[node name="LockTexture" type="TextureRect" parent="ShopPanel/DuringFightLockPanel"]
+layout_mode = 0
+offset_right = 423.0
+offset_bottom = 373.0
+texture = ExtResource("6_mdebj")
+expand_mode = 1
 
 [node name="IventoryPanel" type="Panel" parent="."]
 layout_mode = 1

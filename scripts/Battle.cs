@@ -5,7 +5,7 @@ using System.Linq;
 
 public partial class Battle : Control
 {
-	// 1. PLAYER AND ENEMY DATA
+	//  PLAYER AND ENEMY DATA
 	public class PlayerStats
 	{
 		public int BaseAttack = 15;
@@ -39,7 +39,7 @@ public partial class Battle : Control
 		public int CurrentVitality;
 	}
 
-	// 2. SHOP AND INVENTORY DATA
+	//  SHOP AND INVENTORY DATA
 	public enum ShopItemType
 	{
 		AttackPotion,
@@ -71,7 +71,7 @@ public partial class Battle : Control
 	private int _tempDefenseBoost;
 	private int _tempLuckBoost;
 
-	// 3. UI REFERENCES
+	//  UI REFERENCES
 	private Label _attackLabel, _defenseLabel, _vitalityLabel, _luckLabel;
 	private ProgressBar _hpBar, _enemyHpBar;
 	private Label _hpValueLabel, _enemyHpLabel;
@@ -95,6 +95,9 @@ public partial class Battle : Control
 	private AudioStreamPlayer _rerollSound;
 	private AudioStreamPlayer _backgroundMusic;
 
+
+	private Panel _DuringFightLockPanel;
+
 	public override void _Ready()
 	{
 		InitializeEnemyPool();
@@ -102,6 +105,9 @@ public partial class Battle : Control
 		GenerateNewEnemy();
 		InitializeShop();
 		RefreshUI();
+
+
+
 
 		_fightButton = GetNode<Button>("EnemyContainer/FightButton");
 		_fightButton.Pressed += OnFightButtonPressed;
@@ -319,7 +325,7 @@ public partial class Battle : Control
 			if (slotIndex >= _inventory.Count) return;
 
 			var item = _inventory[slotIndex];
-			_buySound.Play(); // DAT LEVEL UP SOUND
+			_buySound.Play(); // LEVEL UP SOUND
 			UseItem(item);
 			_inventory.RemoveAt(slotIndex);
 			UpdateInventoryUI();
@@ -396,6 +402,10 @@ public partial class Battle : Control
 
 	private void OnFightButtonPressed()
 	{
+		// lock shop
+		_DuringFightLockPanel = GetNode<Panel>("ShopPanel/DuringFightLockPanel");
+		_DuringFightLockPanel.Visible = true;
+		
 		_fightSound.Play();
 		
 		_player.Attack = _player.BaseAttack + _tempAttackBoost;
@@ -421,6 +431,10 @@ public partial class Battle : Control
 
 	private void WinRound()
 	{
+		// unlock shop
+		_DuringFightLockPanel = GetNode<Panel>("ShopPanel/DuringFightLockPanel");
+		_DuringFightLockPanel.Visible = false;
+		
 		// Reset temp bonuses when round increases
 		_tempAttackBoost = 0;
 		_tempDefenseBoost = 0;
