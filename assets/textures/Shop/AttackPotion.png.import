@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cnvq4k410hh38"
-path="res://.godot/imported/AttackPotion.png-f7c40f4307a6dc48b8e322bb7a0c9dbb.ctex"
+path="res://.godot/imported/AttackPotion.png-391f91af8a1ad7972d49def4edf1aae2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/Shop/AttackPotion.png"
-dest_files=["res://.godot/imported/AttackPotion.png-f7c40f4307a6dc48b8e322bb7a0c9dbb.ctex"]
+source_file="res://assets/textures/shop/AttackPotion.png"
+dest_files=["res://.godot/imported/AttackPotion.png-391f91af8a1ad7972d49def4edf1aae2.ctex"]
 
 [params]
 

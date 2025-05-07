@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://brb8qhqjmucb0"
-path="res://.godot/imported/shamrock.png-584a421da861511cd201d819737de8ba.ctex"
+path="res://.godot/imported/shamrock.png-60fad100b67b97bc57ed3dff4b698cc6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/Shop/shamrock.png"
-dest_files=["res://.godot/imported/shamrock.png-584a421da861511cd201d819737de8ba.ctex"]
+source_file="res://assets/textures/shop/shamrock.png"
+dest_files=["res://.godot/imported/shamrock.png-60fad100b67b97bc57ed3dff4b698cc6.ctex"]
 
 [params]
 

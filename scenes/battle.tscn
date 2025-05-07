@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bo7tvufudhayh" path="res://assets/textures/Other/Background.png" id="1_bjk6u"]
 [ext_resource type="Script" path="res://scripts/Battle.cs" id="1_cxd3j"]
-[ext_resource type="Texture2D" uid="uid://vok5ulp6whi" path="res://assets/textures/Enemies/enemy10.png" id="2_0xfk6"]
+[ext_resource type="Texture2D" uid="uid://vave15nseccp" path="res://assets/textures/Enemies/enemy10.png" id="2_0xfk6"]
 [ext_resource type="FontFile" uid="uid://e04wrxvglelf" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_cutit"]
 [ext_resource type="Texture2D" uid="uid://c848gsrgoafs1" path="res://assets/textures/Other/Help.png" id="4_6tekd"]
 [ext_resource type="Texture2D" uid="uid://b2s3y0412o5ip" path="res://assets/textures/Shop/food.png" id="5_8iyih"]
