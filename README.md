@@ -38,8 +38,6 @@ Tento projekt slouží výhradně pro nekomerční účely jako školní zadán�
 
 📁 Spuštění hry
 
-Běžte do branche master (neumím s gitem)
-
 Otevřete projekt v Godotu
 
 Spusťte scénu Battle.tscn / pokrocileprogramovani.exe
