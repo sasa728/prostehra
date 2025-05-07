@@ -1,4 +1,5 @@
 🛡 Tahová bojová hra – školní projekt
+
 🎮 O hře
 Tato tahová bojová hra je vytvořená v herním enginu Godot a je určena jako projekt do školy. Hráč se v ní utká s nepřáteli, bude nakupovat vylepšení, spravovat inventář a snažit se přežít až do 18. kola. 
 Hráč má k dispozici 3 životy. Hra kombinuje soubojový systém, obchodní strategii a postupné zvyšování obtížnosti.
